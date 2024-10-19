@@ -7,11 +7,9 @@
       <p>{{ produto.preco }}</p>
 
       <div class="buttons">
-        <button class="detalhes">Detalhes</button>
+        <button class="detalhes" (click)="detalhesProduto(produto.id)">Detalhes</button>
         <button class="comprar">Comprar</button>
-        <button (click)="deletarProduto(produto.id)">Deletar</button>
       </div>
-
     </div>
   }
 </div>

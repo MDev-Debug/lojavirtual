@@ -1,16 +1,11 @@
-/* .adicionar-produto {
-  width: 100%;
-  height: 80%;
+.adicionar-produto {
+  height: 90%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
-.adicionar-produto input, button {
-  width: 200px;
-  height: 30px;
-  border: 0.2 solid gray;
-  outline: 0;
-  margin: 5px;
-} */
+mat-form-field, button {
+  width: 300px;
+}

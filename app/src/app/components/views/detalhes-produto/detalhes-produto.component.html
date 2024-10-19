@@ -1,0 +1,11 @@
+@if (produto) {
+  <div class="produto">
+    <div class="produto-content">
+      <img [src]="produto.url_imagem">
+      <p>{{ produto.nome }}</p>
+      <p>{{ produto.descricao }}</p>
+      <p>{{ produto.preco }}</p>
+      <button mat-flat-button (click)="deletarProduto(produto.id)">Excluir produto</button>
+    </div>
+  </div>
+}

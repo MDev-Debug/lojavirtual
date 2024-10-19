@@ -10,6 +10,8 @@ import { provideHttpClient } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { DetalhesProdutoComponent } from './components/views/detalhes-produto/detalhes-produto.component';
 
 
 @NgModule({
@@ -17,13 +19,15 @@ import { MatInputModule } from '@angular/material/input';
     AppComponent,
     NavbarComponent,
     ListagemProdutosComponent,
-    AdicionarProdutosComponent
+    AdicionarProdutosComponent,
+    DetalhesProdutoComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatInputModule
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [provideHttpClient(), provideAnimationsAsync()],
   bootstrap: [AppComponent]

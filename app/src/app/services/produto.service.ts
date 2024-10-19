@@ -21,4 +21,8 @@ export class ProdutoService {
   public deletarProduto(id: string): Observable<any> {
     return this.http.delete(`${this.baseUrl}/${id}`)
   }
+
+  public obterProdutoPorId(id: string) : Observable<Produto> {
+    return this.http.get<Produto>(`${this.baseUrl}/${id}`)
+  }
 }

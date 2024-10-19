@@ -1,13 +1,23 @@
 <div class="adicionar-produto">
-
   <mat-form-field>
-    <mat-label>Nome</mat-label>
-    <input matInput type="text" [(ngModel)]="nome" placeholder="Nome do produto">
+    <mat-label>Nome do produto</mat-label>
+    <input matInput type="text" [(ngModel)]="nome" />
   </mat-form-field>
 
-  <input placeholder="descricao" [(ngModel)]="descricao">
-  <input placeholder="preço" type="text" [(ngModel)]="preco">
-  <input placeholder="imagem" type="text" [(ngModel)]="url_imagem">
-  <button (click)="salvarProduto()">Adicionar</button>
+  <mat-form-field>
+    <mat-label>Descrição do produto</mat-label>
+    <input matInput type="text" [(ngModel)]="descricao" />
+  </mat-form-field>
 
+  <mat-form-field>
+    <mat-label>Preço do produto</mat-label>
+    <input matInput type="text" [(ngModel)]="preco" />
+  </mat-form-field>
+
+  <mat-form-field>
+    <mat-label>Imagem do produto</mat-label>
+    <input matInput type="text" [(ngModel)]="url_imagem" />
+  </mat-form-field>
+
+  <button mat-flat-button (click)="salvarProduto()">Adicionar</button>
 </div>

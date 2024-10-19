@@ -1,6 +1,7 @@
 import { Component, Injectable, OnInit } from '@angular/core';
 import { ProdutoService } from '../../../services/produto.service';
 import { Produto } from '../../../models/produto';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listagem-produtos',
@@ -10,7 +11,8 @@ import { Produto } from '../../../models/produto';
 export class ListagemProdutosComponent implements OnInit {
   public produtos!: Produto[];
 
-  constructor(private produtoService: ProdutoService) { }
+  constructor(private produtoService: ProdutoService, private rotuer: Router) { }
+
   ngOnInit(): void {
     this.buscarProdutos()
   }
@@ -22,10 +24,7 @@ export class ListagemProdutosComponent implements OnInit {
     })
   }
 
-  public deletarProduto(id: string) {
-    this.produtoService.deletarProduto(id).subscribe(response => {
-      console.log(response);
-      this.buscarProdutos();
-    })
+  public detalhesProduto(id: string) {
+    this.rotuer.navigate(['/detalhes', id]);
   }
 }
